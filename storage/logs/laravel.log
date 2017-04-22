@@ -1,0 +1,27 @@
+[2017-04-22 14:37:08] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'parse error' in /Users/yangjungan/Pictures/AtrixBox/WorkstationOS/php/laravel/blog/routes/web.php:23
+Stack trace:
+#0 {main}  
+[2017-04-22 14:38:01] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'parse error' in /Users/yangjungan/Pictures/AtrixBox/WorkstationOS/php/laravel/blog/routes/web.php:23
+Stack trace:
+#0 {main}  
+[2017-04-22 14:38:30] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'parse error' in /Users/yangjungan/Pictures/AtrixBox/WorkstationOS/php/laravel/blog/routes/web.php:23
+Stack trace:
+#0 {main}  
+[2017-04-22 14:38:47] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'parse error' in /Users/yangjungan/Pictures/AtrixBox/WorkstationOS/php/laravel/blog/routes/web.php:23
+Stack trace:
+#0 {main}  
+[2017-04-22 15:12:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'parse error, expecting `','' or `';''' in /Users/yangjungan/Pictures/AtrixBox/WorkstationOS/php/laravel/blog/routes/web.php:34
+Stack trace:
+#0 {main}  
+[2017-04-22 15:12:20] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'parse error, expecting `','' or `';''' in /Users/yangjungan/Pictures/AtrixBox/WorkstationOS/php/laravel/blog/routes/web.php:34
+Stack trace:
+#0 {main}  
+[2017-04-22 15:17:06] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'parse error' in /Users/yangjungan/Pictures/AtrixBox/WorkstationOS/php/laravel/blog/routes/web.php:43
+Stack trace:
+#0 {main}  
+[2017-04-22 15:17:08] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'parse error' in /Users/yangjungan/Pictures/AtrixBox/WorkstationOS/php/laravel/blog/routes/web.php:43
+Stack trace:
+#0 {main}  
+[2017-04-22 15:17:38] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'parse error' in /Users/yangjungan/Pictures/AtrixBox/WorkstationOS/php/laravel/blog/routes/web.php:43
+Stack trace:
+#0 {main}  
