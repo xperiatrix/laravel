@@ -18,6 +18,13 @@ Route::get('/', function () {
 });
 
 
+Route::get('employees', function () {
+    $employees = App\Employees::all();
+    return $employees;
+});
+
+
+
 Route::get('/home/{name}', function ($name) {
     return array("1", "2", "3", "4", $name);
 });
