@@ -23,6 +23,39 @@ Route::get('employees', function () {
     return $employees;
 });
 
+Route::get('employees_name', function () {
+//    $employees = App\Employees::where('name', '=', 'tim')->first();
+    $employees = App\Employees::where('name', '=', 'tim')->get();
+    return $employees;
+});
+
+
+Route::get('company', function () {
+    $companies = App\Company::all();
+    foreach ($companies as $company) {
+//        Solution-A:
+//        $empolyee = App\Employees::find($company->employeeid);
+//        echo $empolyee->name . ' comes from ' .  $company->companyname . '<br>';   // --> HTML
+
+//        Solution-B:
+        echo $company->comesFrom->name . ' comes from ' . $company->companyname . '<br>';
+    }
+//    return $companyList;  // --> Json Data
+});
+
+
+Route::get('employees/{id}', function ($id) {
+    $employees = App\Employees::find($id);
+//    return $employees ? : "nothing";
+
+    echo $employees->name . ' used to work for' . '<br>';
+    echo '<ul>';
+    foreach ($employees->workedFor as $company) {
+        echo '<li>' . $company->companyname . '</li> <br>';
+    }
+    echo '</ul>';
+});
+
 
 
 Route::get('/home/{name}', function ($name) {
