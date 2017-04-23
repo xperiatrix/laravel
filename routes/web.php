@@ -11,10 +11,31 @@
 |
 */
 
-Route::get('/', function () {
-//    return view('welcome');
+// One-To-One
+//1  http://localhost:8000/employees
+//2  http://localhost:8000/employees_name
+//3  http://localhost:8000/company
+//4  http://localhost:8000/companyList
 
-    return "Hello Laravel";
+// One-To-Many
+//5  http://localhost:8000/employees/1
+//6  http://localhost:8000/employeesList
+
+// Simple Test
+//7  http://localhost:8000/home/11
+
+Route::get('/', function () {
+   // return view('welcome');
+
+    $array = array(
+        'var1' => 'Apple',
+        'var2' => 'Blackberry',
+        'var3' => 'Nokia',
+    );
+    return view('Testpage', $array);
+    
+
+    // return "hello thoughtworks";
 });
 
 
@@ -23,9 +44,21 @@ Route::get('employees', function () {
     return $employees;
 });
 
+
+Route::get('employeesList', function () {
+    $employees = App\Employees::all();
+    $data = DB::select('select a.*, b.* from employees as a, company as b where a.id = b.employeeid');
+
+    for ($i=0; $i < count($data); $i++) { 
+        // Format output Json styles
+    }
+
+    return $data;
+});
+
 Route::get('employees_name', function () {
 //    $employees = App\Employees::where('name', '=', 'tim')->first();
-    $employees = App\Employees::where('name', '=', 'tim')->get();
+    $employees = App\Employees::where('name', '=', 'tom')->get();
     return $employees;
 });
 
@@ -43,6 +76,11 @@ Route::get('company', function () {
 //    return $companyList;  // --> Json Data
 });
 
+Route::get('companyList', function () {
+    $companies = App\Company::all();
+    return $companies;
+});
+
 
 Route::get('employees/{id}', function ($id) {
     $employees = App\Employees::find($id);
@@ -57,11 +95,14 @@ Route::get('employees/{id}', function ($id) {
 });
 
 
-
+// parameters
 Route::get('/home/{name}', function ($name) {
     return array("1", "2", "3", "4", $name);
 });
 
+
+
+// RESTful API
 
 Route::post('test', function () {
     return array("1", "2", "3", "4");  // create
@@ -75,6 +116,8 @@ Route::get('test', function () {  // read
     echo '<input type="hidden" value="PUT" name="_method">';
     echo '<input type="hidden" value="DELETE" name="_method">';
     echo '</form>';
+
+    // return array("Hello Laravel");
 });
 
 
@@ -85,6 +128,4 @@ Route::put('test', function () {
 Route::delete('test', function () {
     echo 'This method triggers from Delete';  // delete
 });
-
-
 
